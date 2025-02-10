@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define beans here -->
+
+    <!-- Setter Injection -->
+    <!-- 
+    <bean id="student" class="com.wipro.Student">
+        <property name="stid" value="100" />
+        <property name="stname" value="pavan" />
+    </bean>
+    -->
+
+    <!-- Constructor Injection -->
+    <bean id="student" class="com.wipro.Student">
+        <constructor-arg name="stid" value="40" />
+        <constructor-arg name="stname" value="kalyan" />
+    </bean>
+
+</beans>

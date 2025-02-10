@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define Student2 Bean -->
+    <bean id="student" class="com.wipro.Student3">
+        <property name="stid" value="100" />
+        <property name="stname" value="pavan" />
+        <property name="address">
+            <list>
+                <ref bean="add1" />
+                <ref bean="add2" />
+            </list>
+        </property>
+    </bean>
+
+    <!-- Define Address Beans -->
+    <bean id="add1" class="com.wipro.Address">
+        <property name="cityname" value="Hyderabad" />
+        <property name="statename" value="Telangana" />
+    </bean>
+
+    <bean id="add2" class="com.wipro.Address">
+        <property name="cityname" value="Pune" />
+        <property name="statename" value="Maharashtra" />
+    </bean>
+
+</beans>

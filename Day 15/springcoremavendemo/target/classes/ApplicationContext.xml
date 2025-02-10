@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define beans here -->
+
+    <!-- Setter Injection -->
+    
+    <bean id="student" class="com.wipro.Student">
+        <property name="stid" value="100" />
+        <property name="stname" value="pavan" />
+        <property name="address" ref="add" /> 
+        <!--  here we need to add two values so we mentioned 
+        ref with that we need to add one more bean to it -->
+        
+    </bean>
+    <bean id="add" class="com.wipro.Address">
+    	<property name="cityName" value="hyderabad"/>
+    	<property name="stateName" value="Telangana"/>
+    </bean>
+        
+   
+    
+
+   
+        
+</beans>
